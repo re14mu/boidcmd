@@ -28,22 +28,10 @@ download and install docker for your OS from  https://docs.docker.com/install/
 $ docker create -v /var --name boidData re14mu/boid-repository:boid
 
 #run interactive docker
-$ docker run -t -i    --volumes-from boidData  re14mu/boid-repository:boid /bin/bash
 #start boid using the script below , you will be required to login if it is the first time running the command
-$ ./home/ds/boid/trunk/runboid.sh 
-$boidcmd status
+$ docker run -t -i    --volumes-from boidData  re14mu/boid-repository:boid 
+
 
 #if you exit the docker container and need to restart just run
-$ docker run -t -i    --volumes-from boidData  re14mu/boid-repository:boid /bin/bash
-#start boid using the script below inside the container command prompt
-$ ./home/ds/boid/trunk/runboid.sh 
-> note after running the script above , you should be able to any boidcmd command like
-> to check status inside the docker container
-$boidcmd status
- > to resume after suspend
-$boidcmd resume
-> to suspend
-boidcmd suspend
+$ docker run -t -i    --volumes-from boidData  re14mu/boid-repository:boid
 
-dcmd help
-```
