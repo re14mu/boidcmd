@@ -17,11 +17,11 @@
 
 ### Setup
 
-> install docker
-wget https://docs.docker.com/install/linux/docker-ce/ubuntu/
-
-
 ```shell
+> install docker
+download and install from https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+
 #once off vulome creation
 $ docker create -v /var --name boidData re14mu/boid-repository:boid
 
