@@ -16,10 +16,11 @@
 # Boid Docker CLI
 
 ### Setup
-#### this will download docker image that is ready to run
 
 
-download and install for your OS from  https://docs.docker.com/install/
+download and install docker for your OS from  https://docs.docker.com/install/
+
+#### below setup will download docker image that is ready to run 
 
 ```shell
 
