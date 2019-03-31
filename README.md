@@ -33,9 +33,9 @@ $ docker run -t -i    --volumes-from boidData  re14mu/boid-repository:boid /bin/
 $ ./home/ds/boid/trunk/runboid.sh 
 $boidcmd status
 
-#if you exit the container and need to restart just run
+#if you exit the docker container and need to restart just run
 $ docker run -t -i    --volumes-from boidData  re14mu/boid-repository:boid /bin/bash
-#start boid using the script below , you will be required to login if it is the first time running the command
+#start boid using the script below inside the container command prompt
 $ ./home/ds/boid/trunk/runboid.sh 
 > note after running the script above , you should be able to any boidcmd command like
 > to check status inside the docker container
