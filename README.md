@@ -29,9 +29,10 @@ $ docker create -v /var --name boidData re14mu/boid-repository:boid
 
 #run interactive docker
 #start boid using the script below , you will be required to login if it is the first time running the command
-$ docker run -t -i    --volumes-from boidData  re14mu/boid-repository:boid 
+$ docker run -t -i -d   --volumes-from boidData   re14mu/boid-repository:boid 
 
 
 #if you exit the docker container and need to restart just run
-$ docker run -t -i    --volumes-from boidData  re14mu/boid-repository:boid
+$ docker run -t -i  -d  --volumes-from boidData  re14mu/boid-repository:boid
+# how to check if container is running
 
