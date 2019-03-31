@@ -13,41 +13,36 @@
 </p>
 
 
-# Boid CLI
-
-> A linux command line interface for Boid 
-
-### From a fresh Debian/Ubuntu install:
-```shell
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-
-command -v nvm
-
-nvm install node
-```
-##### This CLI has only been tested on Debian based distributions.
-
+# Boid Docker CLI
 
 ### Setup
 
-> install this package first
+> install docker
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
+docker create -v /var --name boidData re14mu/boid-repository:boid
+
 
 ```shell
-$ npm install boidcmd -g
+#docker container 
+$ docker create -v /var --name boidData re14mu/boid-repository:boid
+#run interactive docker
+$ docker run -t -i    --volumes-from boidData  re14mu/boid-repository:boid /bin/bash
+#start boid using the script below , you will be required to login if it is the first time running the command
+$ ./home/ds/boid/trunk/runboid.sh 
+
 ```
 
-> now setup boid 
+> if you exit the container and need to restart just run
+$ docker run -t -i    --volumes-from boidData  re14mu/boid-repository:boid /bin/bash
+#start boid using the script below , you will be required to login if it is the first time running the command
+$ ./home/ds/boid/trunk/runboid.sh 
+> note after running the script above , you should be able to any boidcmd command like
+> to check status inside the docker container
+$boidcmd status
+ > to resume after suspend
+$boidcmd resume
+> to suspend
+boidcmd suspend
 
-```shell
-$ boidcmd setup
-```
-##### Note: The setup phase runs: 
-sudo apt install boinc-client -y
-##### If you want to manually install boinc, you can run this line yourself before running setup.
-
-
-> additional commands can be found in the help menu
-
-```shell
-$ boidcmd help
+dcmd help
 ```
