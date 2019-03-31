@@ -19,7 +19,6 @@
 #### this will download docker image that is ready to run
 
 
-> install docker
 download and install for your OS from  https://docs.docker.com/install/
 
 ```shell
