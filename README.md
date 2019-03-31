@@ -18,10 +18,10 @@
 ### Setup
 #### this will download docker image that is ready to run
 
-```shell
+
 > install docker
 download and install from https://docs.docker.com/install/linux/docker-ce/ubuntu/
-
+```shell
 
 #once off docker volume creation
 $ docker create -v /var --name boidData re14mu/boid-repository:boid
