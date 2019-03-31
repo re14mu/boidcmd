@@ -20,7 +20,8 @@
 
 
 > install docker
-download and install from https://docs.docker.com/install/linux/docker-ce/ubuntu/
+download and install for your OS from  https://docs.docker.com/install/
+
 ```shell
 
 #once off docker volume creation
