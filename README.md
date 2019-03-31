@@ -16,6 +16,7 @@
 # Boid Docker CLI
 
 ### Setup
+#### this will download docker image that is ready to run
 
 ```shell
 > install docker
