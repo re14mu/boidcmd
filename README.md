@@ -22,7 +22,7 @@
 download and install from https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 
-#once off vulome creation
+#once off docker volume creation
 $ docker create -v /var --name boidData re14mu/boid-repository:boid
 
 #run interactive docker
