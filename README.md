@@ -36,6 +36,8 @@ debf181b47bbd33b1abd80139aa1ede357bc51912317f2b39cda4cf0826cfaa2
 $ docker container list
 CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS              PORTS               NAMES
 debf181b47bb        localhost:5000/boid_play:latest   "/bin/sh -c '/script…"   3 minutes ago       Up 3 minutes                            wonderful_curran
+# how to check if boid is running inside container 
+$ docker exec -ti <ONTAINER ID> boidcmd status
 
 
 
