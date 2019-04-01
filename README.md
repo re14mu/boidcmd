@@ -31,8 +31,6 @@ output a long like
 #run interactive docker
 #start boid using the script below , you will be required to login if it is the first time running the command
 $ docker run -t -i  --volumes-from boidData   re14mu/boid-repository:boid
-output a long  string like  
-debf181b47bbd33b1abd80139aa1ede357bc51912317f2b39cda4cf0826cfaa2
 #how to check if container is running
 $ docker container list
 CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS              PORTS               NAMES
