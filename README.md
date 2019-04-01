@@ -38,6 +38,8 @@ CONTAINER ID        IMAGE                             COMMAND                  C
 debf181b47bb        localhost:5000/boid_play:latest   "/bin/sh -c '/script…"   3 minutes ago       Up 3 minutes                            wonderful_curran
 # how to check if boid is running inside container 
 $ docker exec -ti <ONTAINER ID> boidcmd status
+#how to stop container
+$ docker container stop <ONTAINER ID>
 
 
 
