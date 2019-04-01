@@ -22,8 +22,9 @@ RUN apt-get install vim -y
 #ENTRYPOINT ["/runboid.sh"
 COPY ./script.sh /
 RUN chmod +x /script.sh
-ENTRYPOINT ["/script.sh"]
-CMD ["true", "batman", "superman"]
+#ENTRYPOINT ["/script.sh"]
+#CMD ["true", "batman", "superman"]
+CMD /script.sh && tail -f /dev/null
 #CMD ["runboid.sh"]
 #RUN ln -s /home/ds/boid/trunk/runboid.sh / # backwards compat
 #ENTRYPOINT ["runboid.sh"]

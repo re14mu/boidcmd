@@ -3,7 +3,7 @@
 echo ---------------------------------------------------------------------------
 echo   Hello!, Running boinc 
 echo -----------------------------------------------------------------------------
-boinc --dir '/var/lib/boinc-client/' --daemon --allow_remote_gui_rpc
+boinc --dir '/var/lib/boinc-client/' --daemon --allow_remote_gui_rpc --detach_console
 echo "checking boid status"
 boidcmd status
 if [ ! -f /var/lib/boinc-client/boid.txt ]; then
@@ -28,11 +28,14 @@ echo ---------------------------------------------------------------------------
 echo ---------------------------------------------------------------------------
 boidcmd resume
 echo ---------------------------------------------------------------------------
-echo "waiting for 30 seconds for project to load"
+echo "waiting for for project to load"
 echo ---------------------------------------------------------------------------
-sleep 30
+sleep 60i
+boidcmd resume
 boidcmd status
 fi
+#while true; do date >> /home/ds/out.log & boidcmd status|grep -e suc -e host_t >> /home/ds/out.log & uptime >> /home/ds/out.log ;sleep 3600;done &
+
 #while $1
 #do
 ## echo "Press [CTRL+C] to stop.."
