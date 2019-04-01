@@ -30,9 +30,16 @@ boidcmd resume
 echo ---------------------------------------------------------------------------
 echo "waiting for for project to load"
 echo ---------------------------------------------------------------------------
-sleep 60i
+sleep 60
+echo ---------------------------------------------------------------------------
+echo "DO NOT CLOSE THE  TERMINAL OR DO CTRL+C, open another terminal to check the status "
+echo -------------------------------------------------------------------
 boidcmd resume
 boidcmd status
+echo ---------------------------------------------------------------------------
+echo "DO NOT CLOSE THE  TERMINAL OR DO CTRL+C, open another terminal to check the status "
+echo -------------------------------------------------------------------
+
 fi
 #while true; do date >> /home/ds/out.log & boidcmd status|grep -e suc -e host_t >> /home/ds/out.log & uptime >> /home/ds/out.log ;sleep 3600;done &
 
