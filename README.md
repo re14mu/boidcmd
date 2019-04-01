@@ -26,11 +26,12 @@ download and install docker for your OS from  https://docs.docker.com/install/
 
 #once off docker volume creation
 $ docker create -v /var --name boidData re14mu/boid-repository:boid
-
+output a long like
+626b009b107b531f096cd358e4016090fac214004b11c112848651c493b8bb7c
 #run interactive docker
 #start boid using the script below , you will be required to login if it is the first time running the command
-$ docker run -t -i    --volumes-from boidData   re14mu/boid-repository:boid
-output  string 
+$ docker run -t -i  --volumes-from boidData   re14mu/boid-repository:boid
+output a long  string like  
 debf181b47bbd33b1abd80139aa1ede357bc51912317f2b39cda4cf0826cfaa2
 #how to check if container is running
 $ docker container list
