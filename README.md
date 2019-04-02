@@ -36,7 +36,7 @@ $ docker exec -ti <ONTAINER ID> boidcmd status
 #how to stop container
 $ docker container stop <ONTAINER ID>
 
-#ANOTHER 
+
 
 
 
