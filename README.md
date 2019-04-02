@@ -31,10 +31,12 @@ c386cd77396a749f2c54a0e73cd23044304f4a0371d8600c1f3973f4634d8225
 $ docker container list
 CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS              PORTS               NAMES
 debf181b47bb        localhost:5000/boid_play:latest   "/bin/sh -c '/script…"   3 minutes ago       Up 3 minutes                            wonderful_curran
-# how to check if boid is running inside container 
+# how to check if boid is running inside container, note: project may take while to load all CPU CORES, about 3 minutes  
 $ docker exec -ti <ONTAINER ID> boidcmd status
 #how to stop container
 $ docker container stop <ONTAINER ID>
+
+#ANOTHER 
 
 
 
