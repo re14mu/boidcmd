@@ -23,14 +23,8 @@ download and install docker for your OS from  https://docs.docker.com/install/
 #### below setup will download docker image that is ready to run 
 
 ```shell
-
-#once off docker volume creation
-$ docker create -v /var --name boidData re14mu/boid-repository:boid
-output a long like
-626b009b107b531f096cd358e4016090fac214004b11c112848651c493b8bb7c
-#run interactive docker
 #start boid using the script below , you will be required to login if it is the first time running the command
-$  sudo docker run -t -i -d  -e boidAccountEmail='youremail' -e boidAccountPassWord='yourpassword'  --volumes-from boidData   re14mu/boid-repository:boid 
+$  sudo docker run -t -i -d  -e boidAccountEmail='youremail' -e boidAccountPassWord='yourpassword'  re14mu/boid-repository:boid 
 output a long string like
 c386cd77396a749f2c54a0e73cd23044304f4a0371d8600c1f3973f4634d8225
 #how to check if container is running
