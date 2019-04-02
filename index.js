@@ -77,6 +77,13 @@ var rl = readline.createInterface({
 async function setupBoid(){
     var form = {}
     rl.stdoutMuted = false
+   var username= process.env.boidAccountEmail;
+   var password= process.env.boidAccountPassWord;
+
+   //console.log("using passed login details email")
+   //console.log("using passed login details email: "+username)
+  // console.log("using passed login details password: "+password)
+   if(!username && !password){
     rl.question('Boid Account Email:', (email) => {
         form.email = email
         rl.question('Boid Account Password: ', (password) => {
@@ -95,14 +102,34 @@ async function setupBoid(){
         })
         rl.stdoutMuted = true
         // rl.history = rl.history.slice(1)
+
     })
-    
-    rl._writeToOutput = function _writeToOutput(stringToWrite) {
-      if (rl.stdoutMuted)
-        rl.output.write("*")
-      else
-        rl.output.write(stringToWrite)
+     rl._writeToOutput = function _writeToOutput(stringToWrite) {
+          if (rl.stdoutMuted)
+            rl.output.write("*")
+          else
+            rl.output.write(stringToWrite)
+        }
+        rl.stdoutMuted = true
+    }else{ console.log("using passed login details")
+               form.email = username;
+               form.password = password
+                client.send(form,client.endPoint.authenticateUser,function(response){
+                    response = JSON.parse(response)
+                    if (response.invalid){
+                        console.log()
+                        console.log(response.invalid)
+                    process.exit(0);
+                    }
+                    client.setUserData(response)
+                    rl.close()
+                    setupBoinc()
+                })
+
+
     }
+    
+
 }
 
 function runBoid(){
@@ -336,6 +363,16 @@ function readFiles(callback) {
                                         //some other issue caused a problem
                                     }
                                     console.log('Setup complete. Run "boidcmd status" to view project status')
+                                     cmd.get(
+                                            `
+                                              touch /var/lib/boinc-client/boid.txt
+                                            `,
+                                            function(err, data, stderr){
+
+
+                                            }
+                                        );
+
                                     process.exit(0);
                                 })
                             }
