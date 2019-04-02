@@ -30,7 +30,8 @@ output a long like
 626b009b107b531f096cd358e4016090fac214004b11c112848651c493b8bb7c
 #run interactive docker
 #start boid using the script below , you will be required to login if it is the first time running the command
-$ docker run -t -i  --volumes-from boidData   re14mu/boid-repository:boid
+$  sudo docker run -t -i -d  -e boidAccountEmail='youremail' -e boidAccountPassWord='yourpassword'  --volumes-from boidData   re14mu/boid-repository:boid 
+
 #how to check if container is running
 $ docker container list
 CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS              PORTS               NAMES
