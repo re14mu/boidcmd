@@ -22,6 +22,21 @@ echo "waiting for 30 seconds for project to load"
 echo ---------------------------------------------------------------------------
 sleep 30
 boidcmd status
+boidcmd resume
+echo ---------------------------------------------------------------------------
+echo "waiting another for 30 seconds for project to load"
+echo ---------------------------------------------------------------------------
+
+sleep 30
+boidcmd suspend
+boidcmd resume
+while true; do
+echo ---------------------------------------------------------------------------
+echo "waiting another for 30 seconds for project to load"
+echo ---------------------------------------------------------------------------
+
+ boidcmd status;sleep 30 ;
+done
 else
 echo ---------------------------------------------------------------------------
  echo "Boid Resume"
