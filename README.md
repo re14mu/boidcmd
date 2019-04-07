@@ -43,7 +43,7 @@ debf181b47bb        localhost:5000/boid_play:latest   "/bin/sh -c '/script…"  
 # how to check if boid is running inside container, note: project may take while to load all CPU CORES, about 3 minutes  
 $ docker exec -ti <CONTAINER ID> boidcmd status
 #how to stop container
-$ docker container stop <ONTAINER ID>
+$ docker container stop <CONTAINER ID>
 
 
 
