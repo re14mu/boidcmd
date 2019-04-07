@@ -30,6 +30,8 @@ more details here https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 ### windows docker install
 please follow this link https://docs.docker.com/docker-for-windows/install/
+### docker for mac
+https://docs.docker.com/docker-for-mac/
 
 
 #### below setup will download docker image that is ready to run 
