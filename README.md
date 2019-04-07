@@ -28,6 +28,9 @@ $sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 more details here https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
+### windows docker install
+please follow this link https://docs.docker.com/docker-for-windows/install/
+
 
 #### below setup will download docker image that is ready to run 
 
