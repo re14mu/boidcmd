@@ -50,6 +50,8 @@ $ docker exec -ti <CONTAINER ID> boidcmd status
 #how to stop container
 $ docker container stop <CONTAINER ID>
 
+# how to restart container
+$ docker restart <CONTAINER ID>/<CONTAINER_NAME>
 
 
 
