@@ -19,6 +19,9 @@
 
 
 download and install docker for your OS from  https://docs.docker.com/install/
+####ubuntu docker install
+$ sudo apt-get remove docker docker-engine docker-ce docker.io
+
 
 #### below setup will download docker image that is ready to run 
 
