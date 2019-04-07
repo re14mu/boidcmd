@@ -20,6 +20,8 @@
 
 download and install docker for your OS from  https://docs.docker.com/install/
 #### ubuntu docker install
+$ sudo apt-get update
+
 $ sudo apt-get remove docker docker-engine docker-ce docker.io
 
 $sudo apt-get install docker-ce docker-ce-cli containerd.io
